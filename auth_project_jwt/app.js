@@ -107,6 +107,11 @@ app.post('/login' , async function(req , res){
     }
 })
 
+app.get('/logout' , function(req , res){
+    res.cookie('jwt' , '')
+    res.redirect('/')
+})
+
 
 
 
